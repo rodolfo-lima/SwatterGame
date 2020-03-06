@@ -1,11 +1,11 @@
-var altura = 0
-var largura = 0
-var vidas = 1
-var tempo = 15
+let altura = 0
+let largura = 0
+let vidas = 1
+let tempo = 15
 
-var criaMosquitoTempo = 1500
+let criaMosquitoTempo = 1500
 
-var nivel = window.location.search
+let nivel = window.location.search
 nivel = nivel.replace('?', '') // refazer a gambiarra
 
 if (nivel === 'normal') {
@@ -28,7 +28,7 @@ function ajustaTamanhoPalcoJogo() {
 
 ajustaTamanhoPalcoJogo()
 
-var cronometro = setInterval(function() {
+let cronometro = setInterval(function() {
 
     tempo -= 1
 
@@ -70,7 +70,7 @@ function posicaoRandomica() {
     console.log(posicaoX, posicaoY)
 
     //criar o elemento html
-    var mosquito = document.createElement('img')
+    let mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosquito.png'
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
     mosquito.style.left = posicaoX + 'px'
